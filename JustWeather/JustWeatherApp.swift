@@ -13,6 +13,9 @@ struct JustWeatherApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            SavedLocation.self,
+            PointCacheEntry.self,
+            WeatherSnapshot.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
